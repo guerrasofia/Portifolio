@@ -76,3 +76,9 @@ CREATE TABLE Persons (
     Age int,
     PRIMARY KEY (ID)
 );
+
+--Meu primeiro join que deu certo
+SELECT cliente.localizador_compra, compra.id_compra 
+FROM cliente 
+JOIN compra
+ON cliente.localizador_compra = compra.id_compra;
