@@ -68,6 +68,7 @@ CHANGE COLUMN `id_cliente` `id_cliente` INT NOT NULL ,
 ADD PRIMARY KEY (`id_cliente`);
 ;
 
+--Criando tabela com a chave primaria
 CREATE TABLE Persons (
     ID int NOT NULL,
     LastName varchar(255) NOT NULL,
