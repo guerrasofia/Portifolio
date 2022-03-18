@@ -34,4 +34,4 @@ WHERE
 --JOIN
 alter table bb
 add foreign key (column)
-references table(Ccolumn);
+references table(column);
