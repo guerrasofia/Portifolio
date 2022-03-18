@@ -1,15 +1,19 @@
-SELECT * FROM bb_country_length WHERE Country= 'Australia'
+--Couting itens 
+SELECT COUNT(*) FROM bb
+
+--Selecting more specific data
+SELECT * FROM bb WHERE Country= 'Australia'
 
 SELECT COUNT(Country)
-FROM bb_country_length
+FROM bb
 WHERE country='Australia';
 
---Tive que apagar os com country NA para facilitar minha vida kk
-DELETE FROM bb_country_length
+--How to delete data from table
+DELETE FROM bb
 WHERE country='NA'; 
 
---Para limpar duplicatas
-DELETE FROM bb_country_length 
+--To clean duplicates
+DELETE FROM bb
 WHERE 
 	imdb_id IN (
 	SELECT 
@@ -21,14 +25,13 @@ WHERE
 				PARTITION BY imdb_id_corrigido
 				ORDER BY imdb_id_corrigido) AS row_num
 		FROM 
-			bb_country_length
+			bb
 		
 	) t
     WHERE row_num > 1
 );
 
-
 --JOIN
-alter table bb_country_length
-add foreign key (CodigoPais)
-references lista_paises(CountryCode);
+alter table bb
+add foreign key (column)
+references table(Ccolumn);
