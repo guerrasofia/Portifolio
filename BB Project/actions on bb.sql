@@ -31,7 +31,12 @@ WHERE
     WHERE row_num > 1
 );
 
---JOIN
+--Before join
 alter table bb
 add foreign key (column)
 references table(column);
+
+--Join (not working yet)
+select bb.localizador , list_country.phoneCode 
+from bb join list_country
+on list_country.phoneCode = bb.localizador;
