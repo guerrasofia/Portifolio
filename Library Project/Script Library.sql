@@ -15,7 +15,7 @@ CREATE TABLE cliente(
 	email_cliente TEXT
 );
 
-CREATE TABLE vendedor(
+CREATE TABLE vendedor()
 	id_vendedor INT,
 	nome_vendedor TEXT,
 	data_contratacao_vendedor DATE,
@@ -82,3 +82,5 @@ SELECT cliente.localizador_compra, compra.id_compra
 FROM cliente 
 JOIN compra
 ON cliente.localizador_compra = compra.id_compra;
+
+--Próximos passo conectar todas as tabelas
